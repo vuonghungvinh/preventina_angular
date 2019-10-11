@@ -1,0 +1,61 @@
+.preview {
+  text-align: center;
+  input.name-input {
+    margin-top: 16px;
+  }
+}
+
+.preview-inner {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.preview-box {
+  position: relative;
+}
+
+.preview-box-item-text {
+  position: absolute;
+  z-index: 999;
+  width: 200px;
+  height: 40px;
+  padding: 10px;
+  background: #000;
+  color: #fff;
+
+  &.head {
+    top: 3%;
+    right: 0;
+  }
+
+  &.face {
+    top: 19%;
+    right: 63%;
+  }
+
+  &.arms {
+    top: 30%;
+    right: 71%;
+  }
+
+  &.left-hands {
+    top: 42%;
+    right: 72%;
+  }
+
+  &.right-hands {
+    top: 42%;
+    left: 72%;
+  }
+
+  &.legs {
+    top: 60%;
+    left: 63%
+  }
+
+  &.feet {
+    top: 80%;
+    left: 0;
+  }
+}

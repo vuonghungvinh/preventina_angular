@@ -1,0 +1,4 @@
+<div class="editable-title" [class.editing]="editingSubject | async" (dblclick)="dbClickHandler()">
+  <div>{{ poster.name || '&nbsp;' }}</div>
+  <input type="text" [(ngModel)]="poster.name" (blur)="editingSubject.next(false)">
+</div>

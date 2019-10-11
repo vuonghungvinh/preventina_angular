@@ -1,0 +1,81 @@
+$tabsBgColor: #b4b4b4;
+$tabsNavBgColor: #101010;
+
+.tabs-nav {
+  background: $tabsBgColor;
+
+  .tabs-nav-item {
+    border-radius: 0;
+    text-align: center;
+    cursor: pointer;
+    background: $tabsNavBgColor;
+
+    & + .tabs-nav-item {
+      margin-top: 0;
+    }
+
+    &.active {
+      background: $tabsBgColor;
+
+      .tabs-nav-item-title {
+        color: #000;
+      }
+
+      & > a {
+        background: none;
+
+        &:hover {
+          background: none;
+        }
+      }
+
+      & + .tabs-nav-item {
+        border-radius: 0 20px 0 0;
+      }
+    }
+
+    &:hover {
+      .tabs-nav-item-circle {
+        background:#000;
+        color:  #fff;
+        border-color: #fff;
+      }
+
+      & > a {
+        background: none;
+
+        &:hover {
+          background: none;
+        }
+      }
+    }
+
+    &.before-selected {
+      border-radius: 0 0 20px 0;
+    }
+
+    .tabs-nav-item-circle,
+    &.disabled:hover .tabs-nav-item-circle {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border: 2px solid $tabsNavBgColor;
+      margin-bottom: 5px;
+      border-radius: 20px;
+      background: #fff;
+      color: #000;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 35px;
+    }
+
+    .tabs-nav-item-title {
+      color: #fff;
+    }
+  }
+}
+
+.things-tabs {
+  position: relative;
+  width: 100%;
+}

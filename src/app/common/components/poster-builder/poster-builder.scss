@@ -1,0 +1,46 @@
+.preview-box-item {
+  width: 100%;
+
+  & > .preview-box-item-wrap {
+    height: 100%;
+
+    & > div {
+      height: 100%;
+    }
+  }
+
+  svg,
+  .img-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.gear-component {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+img {
+  &::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+  }
+}
+
+poster-builder {
+  display: block;
+}
+
+gear {
+  display: block;
+}
+
+dynamic-gear {
+  display: block;
+}

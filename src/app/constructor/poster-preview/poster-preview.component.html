@@ -1,0 +1,24 @@
+<div class="preview">
+  <h2 (click)="enterEditName()" [hidden]="isEditingName">{{ poster && poster.name || 'New poster' }}</h2>
+  <input
+  #nameInput
+  [(ngModel)]="name"
+  class="name-input"
+  (blur)="exitEditName()"
+  [hidden]="!isEditingName">
+
+  <div class="preview-inner" id="preview">
+    <div class="preview-box" *ngIf="poster">
+      <poster-builder [poster]="poster"></poster-builder>
+      <div *ngFor="let type of firebaseService.tabs$ | async">
+        <div [ngStyle]="{
+            top: poster[type.gearType].commentPosition ? poster[type.gearType].commentPosition.top + 'px' : '',
+            left: poster[type.gearType].commentPosition ? poster[type.gearType].commentPosition.left + 'px' : '' }"
+             [attr.data-text-thing-type]="type.gearType"
+             [class]="'preview-box-item-text ' + type.gearType"
+             *ngIf="poster[type.gearType] && poster[type.gearType].comment">
+          {{ poster[type.gearType].comment }}</div>
+      </div>
+    </div>
+  </div>
+</div>

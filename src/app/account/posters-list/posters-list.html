@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-12">
+    <h2>Posters list</h2>
+  </div>
+</div>
+
+<div class="row posters-list">
+  <div class="col-xs-12 col-sm-3 col-md-2 posters-list-item" *ngFor="let item of posters">
+    <div class="panel panel-default">
+      <div class="panel-heading clearfix">
+        <editable-title class="ellipsis posters-list-item-title" [poster]="item" (updatePoster)="updatePoster.emit($event)"></editable-title>
+        <button class="posters-list-item-remove" (click)="askDeletePoster(item)">X</button>
+      </div>
+
+      <div class="panel-body">
+        <a [routerLink]="['/constructor', item.id]">
+          <poster-builder [poster]="item"></poster-builder>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <input #name type="text" placeholder="Name">
+    <button (click)="addPoster.emit({ name: name.value }); name.value = ''">Add poster</button>
+  </div>
+</div>

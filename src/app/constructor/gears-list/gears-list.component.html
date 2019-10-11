@@ -1,0 +1,28 @@
+<div class="things-list">
+   <div class="things-list-container">
+    <div *ngIf="selectedTab.gearType === 'gender'">
+      <div *ngFor="let gear of groupedGears[selectedTab.gearType]" class="gender_tab">
+      <gear
+        [gear]="gear"
+        [canHaveComment]="selectedTab.textField"
+        [selected]="isGearSelected(gear)"
+        (select)="onSelectGender($event)"
+        (changeColour)="onChangeColour(gear, $event)"></gear>
+      </div>
+    </div>
+
+    <div *ngIf="selectedTab.gearType !== 'gender' && poster.gender && poster.gender.gender">
+      <div class="gender_tab" *ngFor="let gear of groupedGears[selectedTab.gearType][poster.gender.gender]">
+        <gear
+          [gear]="gear"
+          [firstColour]="poster[selectedTab.gearType] && poster[selectedTab.gearType].uuid === gear.uuid ? poster[selectedTab.gearType].firstColour : undefined"
+          [secondColour]="poster[selectedTab.gearType] && poster[selectedTab.gearType].uuid === gear.uuid ? poster[selectedTab.gearType].secondColour : undefined"
+          [thirdColour]="poster[selectedTab.gearType] && poster[selectedTab.gearType].uuid === gear.uuid ? poster[selectedTab.gearType].thirdColour : undefined"
+          [canHaveComment]="selectedTab.textField"
+          [selected]="isGearSelected(gear)"
+          (select)="onSelectGear($event)"
+          (changeColour)="onChangeColour(gear, $event)"></gear>
+        </div>
+    </div>
+  </div>
+</div>

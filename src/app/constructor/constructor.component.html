@@ -1,0 +1,52 @@
+<!-- Fixed navbar -->
+<div class="layout">
+  <div class="container_wdt">
+    <header [poster]="posterPageService.poster$ | async"></header>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top"></nav>
+
+    <div class="container main-container" [class.authorized]="userService.isAuth$ | async">
+      <div class="row">
+        <div class="left_section content-wrapper">
+          <div class="content">
+            <poster-preview *ngIf="posterPageService.poster$ | async" [poster]="posterPageService.poster$ | async"></poster-preview>
+          </div>
+        </div>
+
+        <div class="right_section sidebar-wrapper">
+          <div class="sidebar">
+            <!--<gears-tabs *ngIf="posterPageService.poster$ | async" [tabs]="firebaseService.tabs$ | async" [poster]="posterPageService.poster$ | async" (selectThing)="selectThing($event)" (deselectThing)="deselectThing($event)"></gears-tabs> -->
+            <gears-tabs *ngIf="posterPageService.poster$ | async" [tabs]="tabs" [poster]="posterPageService.poster$ | async" (selectThing)="selectThing($event)" (deselectThing)="deselectThing($event)"></gears-tabs>
+            <user-nav *ngIf="(userService.isAuth$ | async)" [user]="userService.user$ | async"></user-nav>
+          </div>
+        </div>
+      </div>
+    </div> <!-- /container -->
+  </div>
+</div>
+
+<div class="modal fade" bsModal #newPosterNameModal="bs-modal" [config]="{ backdrop: 'static' }"
+     tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">Enter name of new poster</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="newPosterNameModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <form [formGroup]="newPosterNameForm" class="form-horizontal" (ngSubmit)="closeNewPosterNameModal()" novalidate>
+          <extended-input [labelText]="'Name (*)'" [dirty]="newPosterNameForm.controls.name.dirty" [inputErrors]="newPosterNameForm.controls.name.errors" [errorDefs]="{ required: 'name is required' }" [required]="true">
+            <input type="text" class="form-control" formControlName="name">
+          </extended-input>
+
+          <button type="submit" (click)="closeNewPosterNameModal()" [disabled]="!newPosterNameForm.valid" class="btn btn-primary btn-block btn-lg">
+            <i class="fa fa-save"></i>&nbsp;Save
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

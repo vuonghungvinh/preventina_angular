@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.user-nav {
+  position: relative;
+  z-index: 1000;
+  transition: bottom 0.3s;
+}
+
+.user-nav-badge {
+  height: 90px;
+  padding: 20px 35px 20px 20px;
+  border-top: #00D0CE 2px solid;
+  background-color: #00D0CE;
+  color: #fff;
+  font-size: 1.4em;
+  font-weight: 200;
+  line-height: 48px;
+  position: relative;
+  transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+  user-select: none;
+  cursor: pointer;
+}
+
+.user-nav-badge .icon path {
+  fill: #fff;
+  transition: fill 0.3s;
+}
+
+.user-nav-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-nav-badge .user-nav-name .icon {
+  transition: transform 0.3s;
+}
+
+.user-nav-badge.collapsed .user-nav-name .icon {
+  transform: rotate(180deg);
+}
+
+.user-icon {
+  float: left;
+  margin-right: 20px;
+  margin-top: 6px;
+}
+
+.user-nav-badge .nav-caret {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.user-nav-badge.collapsed {
+  background-color: #fff;
+  color: #777;
+  border-top: #eee 2px solid;
+}
+
+.user-nav-badge.collapsed .icon path {
+  fill: #777;
+}
+
+.user-nav-name .icon {
+  float: right;
+  margin-top: 20px;
+}
+
+.user-nav-drawer {
+  position: absolute;
+  height: auto;
+  bottom: 90px;
+  background: #fff;
+  width: 100%;
+}
+
+.user-nav ul {
+  padding: 10px 0;
+  list-style: none;
+  width: 100%;
+  border-top: #eee 4px solid;
+}
+
+.user-nav li a {
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: #777;
+  border-bottom: #eee 1px solid;
+}
+
+.user-nav li .icon {
+  margin-right: 25px;
+  width: 19px
+}
+
+.user-nav li .icon path {
+  fill: #777
+}

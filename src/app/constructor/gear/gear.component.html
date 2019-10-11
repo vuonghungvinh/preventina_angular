@@ -1,0 +1,76 @@
+<div class="gear" [class.selected]="selected">
+  <static-gear
+    [gear]="gear"
+    [coloursObservable]="mergedColoursObservable"
+    [colours]="[
+      componentStateColours[0] || firstColour || gear.firstColour,
+      componentStateColours[1] || secondColour ||  gear.secondColour,
+      componentStateColours[2] || thirdColour ||  gear.thirdColour
+    ]"
+    id="{{gear.name}}"
+    (select)="onSelect(gear)"
+  ></static-gear>
+
+
+  <div *ngIf="canHaveComment" class="cmmnt_sec">
+    <span class="comment">Comment</span>
+    <button class="comment_icon" (click)="openGearCommentModal()">Comment</button>
+  </div>
+
+  <div *ngIf="firstColourControl" class="cmmnt_sec">
+    <span class="comment">Color</span>
+
+    <span class="fill_color">
+      <input type="color" [formControl]="firstColourControl" class="color_input"/>
+    </span>
+  </div>
+
+  <div *ngIf="secondColourControl"  class="cmmnt_sec">
+    <span class="comment">Color</span>
+
+    <span class="fill_color">
+      <input type="color" [formControl]="secondColourControl" class="color_input"/>
+    </span>
+  </div>
+
+  <div *ngIf="thirdColourControl"  class="cmmnt_sec">
+    <span class="comment">Color</span>
+
+    <span class="fill_color">
+      <input type="color" [formControl]="thirdColourControl" class="color_input"/>
+    </span>
+  </div>
+
+  <div class="img-wrap" *ngIf="gear.thumbnailUrl" (click)="select.emit(gear)">
+    <img [src]="gear.thumbnailUrl">
+  </div>
+</div>
+
+
+<div class="modal fade" bsModal #gearCommentModal="bs-modal" [config]="{ backdrop: 'static' }"
+     tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">Gear's specific comment</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="gearCommentModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <form [formGroup]="gearCommentForm" class="form-horizontal" (ngSubmit)="closeGearCommentModal()" novalidate>
+          <extended-input [labelText]="'Comment'" [dirty]="gearCommentForm.controls.comment.dirty" [inputErrors]="gearCommentForm.controls.comment.errors">
+            <input type="text" class="form-control" formControlName="comment">
+          </extended-input>
+
+          <button type="submit" (click)="closeGearCommentModal()" [disabled]="!gearCommentForm.valid" class="btn btn-primary btn-block btn-lg">
+            <i class="fa fa-save"></i>&nbsp;Save
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+

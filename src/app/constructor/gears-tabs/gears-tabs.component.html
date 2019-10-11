@@ -1,0 +1,13 @@
+ <div *ngIf="(things | json) != '{}' && things != undefined" class="tabs-container">
+    <accordion>
+      <accordion-group *ngFor="let tab of tabs | orderBy : ['level']; let i = index" [heading]="tab.title" [ngClass]="{ 'active': i + 1 }" (click)="selectTab(i)">
+        <gears-list
+          [selectedTab]="tab"
+          [poster]="poster"
+          [groupedGears]="things"
+          (selectThingFunction)="selectThing.emit({ posterId: poster.id, thing: $event })"
+          (deselectThingFunction)="deselectThing.emit({ posterId: poster.id, thing: $event })">
+        </gears-list>
+      </accordion-group>
+    </accordion>
+  </div>

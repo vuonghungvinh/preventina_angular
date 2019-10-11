@@ -1,0 +1,15 @@
+<div class="grid grid--left" [ngClass]="{ 'has-error': errorMessage }">
+  <div class="1/1 grid__cell form-standard-text" *ngIf="helpText">{{ helpText }}</div>
+
+  <label class="1/2 grid__cell form-item-label form-standard-text" *ngIf="labelText">
+    <span [ngClass]="{ 'required': required }">{{ labelText }}</span>
+  </label>
+
+  <div class="grid__cell form-item-error form-error-text" *ngIf="labelText" [ngClass]="{ '1/2': labelText, '1/1': !labelText }">
+    <span *ngIf="errorMessage">{{ errorMessage }}</span>
+  </div>
+
+  <div class="1/1 grid__cell form-input-wrapper">
+    <ng-content></ng-content>
+  </div>
+</div>

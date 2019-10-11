@@ -1,0 +1,5 @@
+<a (click)="select.emit(gear)">
+	<img *ngIf="gear.type==='gender'" src="/assets/img/constructor/{{gear.gender}}_thumbnail.png" />
+	<img *ngIf="gear.type==='skin'" src="/assets/img/constructor/{{gear.gender}}_0{{gear.counter}}_thumbnail.png" />
+	<img *ngIf="gear.type!=='skin' && gear.type!=='gender'" src="/assets/img/constructor/{{gear.name}}_thumbnail.png" />
+</a>

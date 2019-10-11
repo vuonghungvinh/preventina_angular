@@ -1,0 +1,471 @@
+{
+    "default_poster":{
+        "gender": {
+          "uuid": "man_gender",
+          "type": "gender",
+          "gender": "man"
+      }
+    },
+    "tabs":
+    [
+        {
+            "title": "Gender",
+            "gearType": "gender",
+            "level": 0,
+            "format": 1
+        },
+        {
+            "title": "Skin",
+            "gearType": "skin",
+            "level": 1,
+            "format": 1
+        },
+        {
+            "title": "Head",
+            "gearType": "head",
+            "level": 2,
+            "colorPicker": true,
+            "textField": true,
+            "format": 0
+        },
+        {
+            "title": "Face",
+            "gearType": "face",
+            "level": 3,
+            "colorPicker": true,
+            "textField": true,
+            "format": 0
+        },
+        {
+            "title": "Eyes",
+            "gearType": "eyes",
+            "level": 4,
+            "colorPicker": false,
+            "textField": true,
+            "format": 0
+        },
+        {
+            "title": "Ears",
+            "gearType": "ears",
+            "level": 5,
+            "colorPicker": false,
+            "textField": true,
+            "format": 0
+        },
+        {
+          "title": "Body",
+          "gearType": "body",
+          "level": 6,
+          "colorPicker": false,
+          "textField": true,
+          "format": 0
+        },
+        {
+          "title": "Legs",
+          "gearType": "legs",
+          "level": 7,
+          "colorPicker": false,
+          "textField": true,
+          "format": 0
+        }
+    ],
+    "gears": [
+      {
+        "uuid": "man_gender",
+        "type": "gender",
+        "gender": "man"
+      },
+      {
+        "uuid": "woman_gender",
+        "type": "gender",
+        "gender": "woman"
+      },
+      {
+        "uuid": "man_skin_1",
+        "type": "skin",
+        "gender": "man",
+        "counter": 1,
+        "associateId": "woman_skin_1"
+      },
+      {
+        "uuid": "man_skin_2",
+        "type": "skin",
+        "gender": "man",
+        "counter": 2,
+        "associateId": "woman_skin_2"
+      },
+      {
+        "uuid": "man_skin_3",
+        "type": "skin",
+        "gender": "man",
+        "counter": 3,
+        "associateId": "woman_skin_3"
+      },
+      {
+        "uuid": "man_skin_4",
+        "type": "skin",
+        "gender": "man",
+        "counter": 4,
+        "associateId": "woman_skin_4"
+      },
+      {
+        "uuid": "man_skin_5",
+        "type": "skin",
+        "gender": "man",
+        "counter": 5,
+        "associateId": "woman_skin_5"
+      },
+      {
+        "uuid": "man_skin_6",
+        "type": "skin",
+        "gender": "man",
+        "counter": 6,
+        "associateId": "woman_skin_6"
+      },
+      {
+        "uuid": "woman_skin_1",
+        "type": "skin",
+        "gender": "woman",
+        "counter": 1,
+        "associateId": "man_skin_1"
+      },
+      {
+        "uuid": "woman_skin_2",
+        "type": "skin",
+        "gender": "woman",
+        "counter": 2,
+        "associateId": "man_skin_2"
+      },
+      {
+        "uuid": "woman_skin_3",
+        "type": "skin",
+        "gender": "woman",
+        "counter": 3,
+        "associateId": "man_skin_3"
+      },
+      {
+        "uuid": "woman_skin_4",
+        "type": "skin",
+        "gender": "woman",
+        "counter": 4,
+        "associateId": "man_skin_4"
+      },
+      {
+        "uuid": "woman_skin_5",
+        "type": "skin",
+        "gender": "woman",
+        "counter": 5,
+        "associateId": "man_skin_5"
+      },
+      {
+        "uuid": "woman_skin_6",
+        "type": "skin",
+        "gender": "woman",
+        "counter": 6,
+        "associateId": "man_skin_6"
+      },
+      {
+        "uuid": "man_helmet",
+        "name": "helmet",
+        "type": "head",
+        "firstColour": "#faff00",
+        "gender": "man",
+        "associateId": "woman_helmet"
+      },
+      {
+        "uuid": "woman_helmet",
+        "name": "helmet",
+        "type": "head",
+        "firstColour": "#faff00",
+        "gender": "woman",
+        "associateId": "man_helmet",
+        "imgSrc": "assets/gear-templates/all/svg/helmet.html"
+      },
+      {
+        "uuid": "man_helmet_eyes",
+        "name": "helmet_eyes",
+        "type": "eyes",
+        "firstColour": "#faff00",
+        "secondColour": "#cccccc",
+        "gender": "man",
+        "associateId": "woman_helmet_eyes"
+      },
+      {
+        "uuid": "woman_helmet_eyes",
+        "name": "helmet_eyes",
+        "type": "eyes",
+        "firstColour": "#faff00",
+        "secondColour": "#cccccc",
+        "gender": "woman",
+        "associateId": "man_helmet_eyes"
+      },
+      {
+        "uuid": "man_glasses",
+        "name": "glasses",
+        "type": "eyes",
+        "firstColour": "#faff00",
+        "gender": "man",
+        "associateId": "woman_glasses"
+      },
+      {
+        "uuid": "woman_glasses",
+        "name": "glasses",
+        "type": "eyes",
+        "firstColour": "#faff00",
+        "gender": "woman",
+        "associateId": "man_glasses"
+      },
+      {
+        "uuid": "man_dust",
+        "name": "dust",
+        "type": "face",
+        "firstColour": "#cccccc",
+        "secondColour": "#cccccc",
+        "gender": "man",
+        "associateId": "woman_dust"
+      },
+      {
+        "uuid": "woman_dust",
+        "name": "dust",
+        "type": "face",
+        "firstColour": "#cccccc",
+        "secondColour": "#cccccc",
+        "gender": "woman",
+        "associateId": "man_dust"
+      },
+      {
+        "uuid": "man_gas",
+        "name": "gas",
+        "type": "face",
+        "firstColour": "#faff00",
+        "secondColour": "#cccccc",
+        "gender": "man",
+        "associateId": "woman_gas"
+      },
+      {
+        "uuid": "woman_gas",
+        "name": "gas",
+        "type": "face",
+        "firstColour": "#faff00",
+        "secondColour": "#cccccc",
+        "gender": "woman",
+        "associateId": "man_gas"
+      },
+      {
+        "uuid": "man_noise",
+        "name": "noise",
+        "type": "ears",
+        "firstColour": "#90ed2c",
+        "secondColour": "#cccccc",
+        "gender": "man",
+        "associateId": "woman_noise"
+      },
+      {
+        "uuid": "woman_noise",
+        "name": "noise",
+        "type": "ears",
+        "firstColour": "#90ed2c",
+        "secondColour": "#cccccc",
+        "gender": "woman",
+        "associateId": "man_noise"
+      },
+      {
+        "uuid": "man_helmet_noise",
+        "name": "helmet_noise",
+        "type": "ears",
+        "firstColour": "#faff00",
+        "secondColour": "#cccccc",
+        "gender": "man",
+        "associateId": "woman_helmet_noise"
+      },
+      {
+        "uuid": "woman_helmet_noise",
+        "name": "helmet_noise",
+        "type": "ears",
+        "firstColour": "#faff00",
+        "secondColour": "#cccccc",
+        "gender": "woman",
+        "associateId": "man_helmet_noise"
+      },
+      {
+        "uuid": "man_tshirt",
+        "name": "tshirt",
+        "type": "body",
+        "firstColour": "#faff00",
+        "secondColour": "#cccccc",
+        "gender": "man",
+        "associateId": "woman_tshirt"
+      },
+      {
+        "uuid": "woman_tshirt",
+        "name": "tshirt",
+        "type": "body",
+        "firstColour": "#faff00",
+        "secondColour": "#cccccc",
+        "gender": "woman",
+        "associateId": "man_tshirt"
+      },
+      {
+        "uuid": "man_tshirt_white",
+        "name": "tshirt_white",
+        "type": "body",
+        "firstColour": "#faff00",
+        "secondColour": "#cccccc",
+        "gender": "man",
+        "associateId": "woman_tshirt_white"
+      },
+      {
+        "uuid": "woman_tshirt_white",
+        "name": "tshirt_white",
+        "type": "body",
+        "firstColour": "#faff00",
+        "secondColour": "#cccccc",
+        "gender": "woman",
+        "associateId": "man_tshirt_white"
+      },
+      {
+        "uuid": "man_pants",
+        "name": "pants",
+        "type": "legs",
+        "firstColour": "#faff00",
+        "secondColour": "#cccccc",
+        "gender": "man",
+        "associateId": "woman_pants"
+      },
+      {
+        "uuid": "woman_pants",
+        "name": "pants",
+        "type": "legs",
+        "firstColour": "#faff00",
+        "secondColour": "#cccccc",
+        "gender": "woman",
+        "associateId": "man_pants"
+      },
+      {
+        "uuid": "man_pants_blue",
+        "name": "pants_blue",
+        "type": "legs",
+        "firstColour": "#faff00",
+        "secondColour": "#cccccc",
+        "gender": "man",
+        "associateId": "woman_pants_blue"
+      },
+      {
+        "uuid": "woman_pants_blue",
+        "name": "pants_blue",
+        "type": "legs",
+        "firstColour": "#faff00",
+        "secondColour": "#cccccc",
+        "gender": "woman",
+        "associateId": "man_pants_blue"
+      },
+      {
+        "uuid": "man_apron",
+        "name": "apron",
+        "type": "body",
+        "firstColour": "#faff00",
+        "secondColour": "#cccccc",
+        "gender": "man",
+        "associateId": "woman_apron"
+      },
+      {
+        "uuid": "woman_apron",
+        "name": "apron",
+        "type": "body",
+        "firstColour": "#faff00",
+        "secondColour": "#cccccc",
+        "gender": "woman",
+        "associateId": "man_apron"
+      },
+      {
+        "uuid": "man_warmer",
+        "name": "warmer",
+        "type": "body",
+        "firstColour": "#faff00",
+        "secondColour": "#cccccc",
+        "gender": "man",
+        "associateId": "woman_warmer"
+      },
+      {
+        "uuid": "woman_warmer",
+        "name": "warmer",
+        "type": "body",
+        "firstColour": "#faff00",
+        "secondColour": "#cccccc",
+        "gender": "woman",
+        "associateId": "man_warmer"
+      },
+      {
+        "uuid": "man_jacket",
+        "name": "jacket",
+        "type": "body",
+        "firstColour": "#faff00",
+        "secondColour": "#cccccc",
+        "gender": "man",
+        "associateId": "woman_jacket"
+      },
+      {
+        "uuid": "woman_jacket",
+        "name": "jacket",
+        "type": "body",
+        "firstColour": "#faff00",
+        "secondColour": "#cccccc",
+        "gender": "woman",
+        "associateId": "man_jacket"
+      },
+      {
+        "uuid": "man_no_sleeve",
+        "name": "no_sleeve",
+        "type": "body",
+        "firstColour": "#faff00",
+        "secondColour": "#cccccc",
+        "gender": "man",
+        "associateId": "woman_no_sleeve"
+      },
+      {
+        "uuid": "woman_no_sleeve",
+        "name": "no_sleeve",
+        "type": "body",
+        "firstColour": "#faff00",
+        "secondColour": "#cccccc",
+        "gender": "woman",
+        "associateId": "man_no_sleeve"
+      },
+      {
+        "uuid": "man_tshirt_long",
+        "name": "tshirt_long",
+        "type": "body",
+        "firstColour": "#faff00",
+        "secondColour": "#cccccc",
+        "gender": "man",
+        "associateId": "woman_tshirt_long"
+      },
+      {
+        "uuid": "woman_tshirt_long",
+        "name": "tshirt_long",
+        "type": "body",
+        "firstColour": "#faff00",
+        "secondColour": "#cccccc",
+        "gender": "woman",
+        "associateId": "man_tshirt_long"
+      },
+      {
+        "uuid": "man_tshirt_long_white",
+        "name": "tshirt_long_white",
+        "type": "body",
+        "firstColour": "#faff00",
+        "secondColour": "#cccccc",
+        "gender": "man",
+        "associateId": "woman_tshirt_long_white"
+      },
+      {
+        "uuid": "woman_tshirt_long_white",
+        "name": "tshirt_long_white",
+        "type": "body",
+        "firstColour": "#faff00",
+        "secondColour": "#cccccc",
+        "gender": "woman",
+        "associateId": "man_tshirt_long_white"
+      }
+    ]
+}

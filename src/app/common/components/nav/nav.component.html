@@ -1,0 +1,24 @@
+
+<div class="container">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+    <a class="navbar-brand" [routerLink]="['/']">Securicky</a>
+  </div>
+
+  <div id="navbar" class="navbar-collapse collapse">
+    <div style="float: right; margin-top: 6px">
+      <button class="btn btn-primary">Preview</button>
+      <button class="btn btn-warning">Download</button>
+      <button class="btn btn-error" (click)="save()">Save</button>
+      <button class="btn btn-success">Buy HD</button>
+      <button class="btn btn-info" *ngIf="!(userService.isAuth$ | async)" [routerLink]="['/login']">Login</button>
+      <button class="btn btn-info" *ngIf="userService.isAuth$ | async" (click)="userService.logout()">Logout</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,2 @@
+<img *ngIf="!gear.template" [src]="gear.url">
+<ng-template *ngIf="gear.template" dynamic-component [componentTemplateUrl]="gear.url"></ng-template>

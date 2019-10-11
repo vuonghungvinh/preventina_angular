@@ -1,0 +1,49 @@
+{
+    "tabs":
+    [
+        {
+            "title": "Gender",
+            "gearType": "gender",
+            "level": 0,
+            "format": 1
+        },
+        {
+            "title": "Skin",
+            "gearType": "skin",
+            "level": 1,
+            "format": 1
+        },
+        {
+            "title": "Head",
+            "gearType": "head",
+            "level": 2,
+            "colorPicker": true,
+            "textField": true,
+            "format": 0
+        },
+        {
+            "title": "Face",
+            "gearType": "face",
+            "level": 3,
+            "colorPicker": true,
+            "textField": true,
+            "format": 0
+        },
+        {
+            "title": "Eyes",
+            "gearType": "eyes",
+            "level": 4,
+            "colorPicker": false,
+            "textField": true,
+            "format": 0
+        },
+        {
+            "title": "Ears",
+            "gearType": "ears",
+            "level": 5,
+            "colorPicker": false,
+            "textField": true,
+            "format": 0
+        }
+    ]
+}

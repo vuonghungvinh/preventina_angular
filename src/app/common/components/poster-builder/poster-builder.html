@@ -1,0 +1,33 @@
+<div class="preview-box-item">
+  <div class="preview-box-item-wrap">
+    <div>
+
+       <dynamic-gear
+        [gear]="poster.skin"
+        [colours]="[poster.skin.firstColour, poster.skin.secondColour, poster.skin.thirdColour]"
+        [attr.data-gear-tab]="skin"
+        [dimensions]="[poster.skin.maleDimensions]"
+      ></dynamic-gear>
+    </div>
+  </div>
+</div>
+<div class="preview-box-item" *ngFor="let thing of poster.stuff">
+  <div class="preview-box-item-wrap">
+    <div>
+
+       <dynamic-gear
+        [gear]="thing"
+        [colours]="[thing.firstColour, thing.secondColour, thing.thirdColour]"
+        [attr.data-gear-tab]="thing.type"
+        [dimensions]="[thing.maleDimensions]"
+      ></dynamic-gear>
+    </div>
+  </div>
+</div>
+<div class="preview-box-item">
+  <div class="preview-box-item-wrap">
+    <div>
+      <ng-template dynamic-component [componentTemplateUrl]="'/assets/gear-templates/man/arm_man_01.html'"></ng-template>
+    </div>
+  </div>
+</div>

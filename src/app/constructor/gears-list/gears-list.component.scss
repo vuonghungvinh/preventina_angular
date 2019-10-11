@@ -1,0 +1,16 @@
+h3 {
+  text-align: center;
+}
+
+.things-list-container-item {
+  border: 1px solid transparent;
+  text-align: center;
+  font-size: 0;
+  line-height: 0;
+
+  &.selected {
+    border-color: #ccc;
+  }
+
+
+}

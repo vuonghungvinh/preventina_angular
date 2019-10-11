@@ -1,0 +1,15 @@
+.editable-title {
+  input {
+    display: none;
+  }
+
+  &.editing {
+    input {
+      display: block;
+    }
+
+    div {
+      display: none;
+    }
+  }
+}

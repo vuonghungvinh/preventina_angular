@@ -1,0 +1,19 @@
+.posters-list-item {
+  .posters-list-item-remove {
+    float: right;
+  }
+
+  .posters-list-item-title {
+    display: inline-block;
+    width: calc(100% - 30px);
+  }
+}
+
+poster-builder {
+  position: relative;
+  display: block;
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+  margin: 0 auto;
+}
