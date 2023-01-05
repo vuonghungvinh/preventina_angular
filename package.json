@@ -49,7 +49,7 @@
     "zone.js": "0.8.9"
   },
   "devDependencies": {
-    "@angular/cli": "1.4.2",
+    "@angular/cli": "15.0.4",
     "@angular/compiler-cli": "4.3.6",
     "@types/jasmine": "2.5.54",
     "@types/jquery": "2.0.41",
@@ -57,7 +57,7 @@
     "@types/node": "~8.0.28",
     "codelyzer": "~3.2.0",
     "html-loader": "0.5.1",
-    "html-webpack-plugin": "2.30.1",
+    "html-webpack-plugin": "5.5.0",
     "jasmine-core": "~2.8.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~1.7.1",
